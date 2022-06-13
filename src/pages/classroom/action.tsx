@@ -1,0 +1,11 @@
+import React from 'react'
+
+const action = () => {
+  return (
+    <div>
+        <h1>Classroom action</h1>
+    </div>
+  )
+}
+
+export default action
