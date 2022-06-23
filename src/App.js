@@ -40,32 +40,33 @@ const App = () => {
     <div className="App">
       <BrowserRouter>
         <Routes>
+          <Route path="/sign-in" index element={<SignIn />} />
+          
           <Route element={<Layout />}>
-
             <Route index element={<Dashboard />} />
 
             <Route path="/classroom" element={<Outlet />}>
               <Route index element={<Classroom />} />
               <Route path="create" element={<ClassroomCreate />} />
-              <Route path="update/:studentId" element={<ClassroomUpdate />} />
+              <Route path="update/:classroomId" element={<ClassroomUpdate />} />
             </Route>
 
             <Route path="/department" element={<Outlet />}>
               <Route index element={<Department />} />
               <Route path="create" element={<DepartmentCreate />} />
-              <Route path="update/:studentId" element={<DepartmentUpdate />} />
+              <Route path="update/:departmentId" element={<DepartmentUpdate />} />
             </Route>
 
             <Route path="/inspection" element={<Outlet />}>
               <Route index element={<Inspection />} />
               <Route path="create" element={<InspectionCreate />} />
-              <Route path="update/:studentId" element={<InspectionUpdate />} />
+              <Route path="update/:inspectionId" element={<InspectionUpdate />} />
             </Route>
 
             <Route path="/lecture" element={<Outlet />}>
               <Route index element={<Lecture />} />
               <Route path="create" element={<LectureCreate />} />
-              <Route path="update/:studentId" element={<LectureUpdate />} />
+              <Route path="update/:lectureId" element={<LectureUpdate />} />
             </Route>
 
             <Route path="/student" element={<Outlet />}>
@@ -83,12 +84,9 @@ const App = () => {
             <Route path="/teacher" element={<Outlet />}>
               <Route index element={<Teacher />} />
               <Route path="create" element={<TeacherCreate />} />
-              <Route path="update/:subjectId" element={<TeacherUpdate />} />
+              <Route path="update/:teacherId" element={<TeacherUpdate />} />
             </Route>
-
           </Route>
-
-          <Route path="/sign-in" element={<SignIn />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -10,12 +10,12 @@ import {
 
 const Navi = () => {
   return (
-    <Navbar className="mb-3 rounded" color="info" expand="md" light>
+    <Navbar className="mb-3 rounded" color="primary" expand="md" dark>
       <NavbarBrand href="/">QR Yoklama Sistemi</NavbarBrand>
       <NavbarToggler onClick={function noRefCheck() {}} />
       <Collapse navbar>
         <Nav className="me-auto" navbar></Nav>
-        <NavLink href="/sign-in">Giriş Yap</NavLink>
+        <NavLink href="/sign-in" className="text-light">Çıkış Yap</NavLink>
       </Collapse>
     </Navbar>
   );

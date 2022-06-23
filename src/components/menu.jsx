@@ -6,13 +6,13 @@ const menu = () => {
   return (
     <div>
       <ListGroup>
-        <ListGroupItem action><Link to="/department">Department</Link></ListGroupItem>
+        <ListGroupItem action><Link to="/department">Bölüm</Link></ListGroupItem>
         <ListGroupItem action><Link to="/inspection">Inspection</Link></ListGroupItem>
-        <ListGroupItem action><Link to="/lecture">Lecture</Link></ListGroupItem>
-        <ListGroupItem action><Link to="/student">Student</Link></ListGroupItem>
-        <ListGroupItem action><Link to="/subject">Subject</Link></ListGroupItem>
-        <ListGroupItem action><Link to="/classroom">Classroom</Link></ListGroupItem>
-        <ListGroupItem action><Link to="/teacher">Teacher</Link></ListGroupItem>
+        <ListGroupItem action><Link to="/lecture">Ders Atama</Link></ListGroupItem>
+        <ListGroupItem action><Link to="/student">Öğrenci</Link></ListGroupItem>
+        <ListGroupItem action><Link to="/subject">Ders</Link></ListGroupItem>
+        <ListGroupItem action><Link to="/classroom">Sınıf</Link></ListGroupItem>
+        <ListGroupItem action><Link to="/teacher">Öğretmen</Link></ListGroupItem>
       </ListGroup>
     </div>
   );
