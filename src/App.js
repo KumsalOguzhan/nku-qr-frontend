@@ -33,6 +33,7 @@ import SubjectCreate from "./pages/subject/subjectCreate";
 import Teacher from "./pages/teacher/index"
 import TeacherUpdate from "./pages/teacher/teacherUpdate"
 import TeacherCreate from "./pages/teacher/teacherCreate";
+import Qr from "./pages/qr/qr";
 
 
 const App = () => {
@@ -44,6 +45,7 @@ const App = () => {
           
           <Route element={<Layout />}>
             <Route index element={<Dashboard />} />
+            <Route path="/qr" element={<Qr />} />
 
             <Route path="/classroom" element={<Outlet />}>
               <Route index element={<Classroom />} />

@@ -12,13 +12,15 @@ import {
 } from "reactstrap";
 import { Formik } from "formik";
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom";
 
 const validationSchema = Yup.object({
   email: Yup.string().email("Geçersiz e-mail adresi").required("Zorunlu alan"),
   password: Yup.string().min(6, "Şifreniz çok kısa").required("Şifre gerekli"),
 });
 
-const signIn = () => {
+const SignIn = () => {
+  const navigate = useNavigate()
   return (
     <div className="container my-5">
       <div className="row justify-content-center">
@@ -33,15 +35,19 @@ const signIn = () => {
                 initialValues={{ email: "", password: "" }}
                 validationSchema={validationSchema}
                 onSubmit={(values) => {
-                  console.log(values);
+                  console.log(values.email);
+                  console.log(values.password)
+                  if (values.email === "admin@nku.edu.tr" && values.password === "123456") {
+                    navigate("/")
+                  }
                 }}
               >
                 {({ handleSubmit, handleChange, values, errors }) => (
                   <Form onSubmit={handleSubmit}>
                     <FormGroup>
-                      <Label for="exampleEmail">Email</Label>
+                      <Label for="email">Email</Label>
                       <Input
-                        id="exampleEmail"
+                        id="email"
                         name="email"
                         placeholder="email giriniz"
                         type="email"
@@ -51,9 +57,9 @@ const signIn = () => {
                       {errors.email && errors.email ? (
                         <div className="text-danger">* {errors.email}</div>
                       ) : null}
-                      <Label className="mt-2" for="examplePassword">Şifre</Label>
+                      <Label className="mt-2" for="password">Şifre</Label>
                       <Input
-                        id="examplePassword"
+                        id="password"
                         name="password"
                         placeholder="şifre giriniz"
                         type="password"
@@ -76,4 +82,4 @@ const signIn = () => {
   );
 };
 
-export default signIn;
+export default SignIn;

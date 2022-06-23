@@ -133,7 +133,7 @@ const StudentUpdate = () => {
                   {departments &&
                     departments.map((department) => (
                       <option value={department.DepartmantID}>
-                        {department.Name} {department.DepartmantID}
+                        {department.Name}
                       </option>
                     ))}
                 </Field>

@@ -13,6 +13,7 @@ const menu = () => {
         <ListGroupItem action><Link to="/subject">Ders</Link></ListGroupItem>
         <ListGroupItem action><Link to="/classroom">Sınıf</Link></ListGroupItem>
         <ListGroupItem action><Link to="/teacher">Öğretmen</Link></ListGroupItem>
+        <ListGroupItem action><Link to="/qr">Qr</Link></ListGroupItem>
       </ListGroup>
     </div>
   );
